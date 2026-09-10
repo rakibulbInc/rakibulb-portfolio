@@ -82,6 +82,29 @@ describe('InfoBullet', () => {
     expect(nestedContainer).not.toBeInTheDocument();
   });
 
+  it('renders the date when provided', () => {
+    const item = {
+      text: 'Engineer at ',
+      highlight: 'Company',
+      date: 'Sep 2025 - Sep 2026',
+    };
+
+    render(<InfoBullet item={item} index={0} />);
+
+    expect(screen.getByText('Sep 2025 - Sep 2026')).toBeInTheDocument();
+  });
+
+  it('does not render a date element when no date provided', () => {
+    const item = {
+      text: 'Engineer at ',
+      highlight: 'Company',
+    };
+
+    const { container } = render(<InfoBullet item={item} index={0} />);
+
+    expect(container.querySelector('[data-testid="info-bullet-date"]')).not.toBeInTheDocument();
+  });
+
   it('renders bullet point symbol', () => {
     const item = {
       text: 'Test ',
