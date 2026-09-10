@@ -11,38 +11,45 @@ export type ProjectType = {
 };
 
 export const PROJECTS: ProjectType[] = [
-   {
-    title: 'Triagely',
-    img: '/projects/triagely.png',
+  {
+    title: 'City-Dispatch',
     description:
-      'An app to help people get started with tasks they find hard to start.',
+      'An 8-service Go delivery dispatch system handling 9,700 rider location updates/sec and serving order requests at 34ms. Its matching engine ranks riders by predicted pickup and dropoff time, and the pipeline is hardened with idempotency keys, duplicate detection and retries with backoff.',
     technologies: [
       {
         img: 'go',
         name: 'Golang',
       },
       {
-        img: 'next',
-        name: 'Next.js',
+        img: 'python',
+        name: 'Python',
       },
       {
-        img: 'react',
-        name: 'React',
+        img: 'postgresql',
+        name: 'PostgreSQL / PostGIS',
       },
       {
-        img: 'ts',
-        name: 'TypeScript',
+        img: 'redis',
+        name: 'Redis',
+      },
+      {
+        img: 'kafka',
+        name: 'Kafka',
+      },
+      {
+        img: 'grpc',
+        name: 'gRPC',
+      },
+      {
+        img: 'prometheus',
+        name: 'Prometheus',
       },
       {
         img: 'docker',
         name: 'Docker',
       },
-      {
-        img: 'github',
-        name: 'GitHub CI/CD',
-      },
     ],
-    url: 'https://triagely.rakibulb.org/',
+    githubUrl: 'https://github.com/RakibulBh/city-dispatch',
   },
   {
     title: 'Cravr',
@@ -86,19 +93,10 @@ export const PROJECTS: ProjectType[] = [
     url: 'https://cravr.rakibulb.org',
   },
   {
-    title: 'Questo',
-    img: '/projects/questo.png',
+    title: 'TailorMyApplication',
     description:
-      'A JIRA-style goal tracker that breaks big goals into sub-goals with checklists. Completion cascades upward — finish the steps and the whole goal completes, with live progress at every level.',
+      'Reverse-engineers any job description, scores your resume against exactly what the role wants, and surfaces the gaps that get you rejected — alongside standout project ideas and warm intros at the company.',
     technologies: [
-      {
-        img: 'go',
-        name: 'Golang',
-      },
-      {
-        img: 'postgresql',
-        name: 'PostgreSQL',
-      },
       {
         img: 'next',
         name: 'Next.js',
@@ -112,19 +110,19 @@ export const PROJECTS: ProjectType[] = [
         name: 'TypeScript',
       },
       {
-        img: 'reactquery',
-        name: 'TanStack Query',
+        img: 'postgresql',
+        name: 'PostgreSQL',
+      },
+      {
+        img: 'clerk',
+        name: 'Clerk',
       },
       {
         img: 'tailwindcss',
         name: 'TailwindCSS',
       },
-      {
-        img: 'docker',
-        name: 'Docker',
-      },
     ],
-    url: 'https://questo.rakibulb.org',
+    url: 'https://tailormyapplication.com/',
   },
   {
     title: 'Hundoscore',
@@ -201,71 +199,6 @@ export const PROJECTS: ProjectType[] = [
     url: 'https://kickpot.rakibulb.org',
   },
   {
-    title: 'Unmasked',
-    img: '/projects/unmask.png',
-    description:
-      'An anonymous, real-time party chat game. Join under a random handle over WebSockets, report the sus messages, and at the end of each round the most-reported player gets unmasked.',
-    technologies: [
-      {
-        img: 'go',
-        name: 'Golang',
-      },
-      {
-        img: 'next',
-        name: 'Next.js',
-      },
-      {
-        img: 'react',
-        name: 'React',
-      },
-      {
-        img: 'ts',
-        name: 'TypeScript',
-      },
-      {
-        img: 'tailwindcss',
-        name: 'TailwindCSS',
-      },
-      {
-        img: 'docker',
-        name: 'Docker',
-      },
-    ],
-    url: 'https://unmask.rakibulb.org',
-  },
-  {
-    title: 'Resistly',
-    description:
-      'An app to help people rewire their brains from bad habits and addictions. Built with OpenAI for intelligent habit tracking and intervention.',
-    technologies: [
-      {
-        img: 'go',
-        name: 'Golang',
-      },
-      {
-        img: 'next',
-        name: 'Next.js',
-      },
-      {
-        img: 'react',
-        name: 'React',
-      },
-      {
-        img: 'ts',
-        name: 'TypeScript',
-      },
-      {
-        img: 'docker',
-        name: 'Docker',
-      },
-      {
-        img: 'github',
-        name: 'GitHub CI/CD',
-      },
-    ],
-    url: 'https://resistly.vercel.app/',
-  },
-  {
     title: 'MemorizePDF',
     description:
       'Summarizes lecture notes into quizzes by difficulty and creates memorable flashcards. Got 400 docs parsed in the first week. Built with Gemini LLM and Apache Tika OCR.',
@@ -335,26 +268,6 @@ export const PROJECTS: ProjectType[] = [
     githubUrl: 'https://github.com/RakibulBh/fido2-auth',
   },
   {
-    title: 'Events REST API',
-    description: 'A REST api to manage events',
-    technologies: [
-      {
-        img: 'go',
-        name: 'Golang',
-      },
-    ],
-  },
-  {
-    title: 'Social App Backend',
-    description: 'A complete backend for a social application',
-    technologies: [
-      {
-        img: 'go',
-        name: 'Golang',
-      },
-    ],
-  },
-  {
     title: 'Habituate',
     description: 'A habit tracker with a rewards system.',
     technologies: [
@@ -373,71 +286,6 @@ export const PROJECTS: ProjectType[] = [
       {
         img: 'tailwindcss',
         name: 'TailwindCSS',
-      },
-    ],
-  },
-  {
-    title: 'Resumatch.ai',
-    description: 'A resume tailor application',
-    technologies: [
-      {
-        img: 'next',
-        name: 'Next.js',
-      },
-      {
-        img: 'ts',
-        name: 'TypeScript',
-      },
-      {
-        img: 'mongodb',
-        name: 'MongoDB',
-      },
-      {
-        img: 's3',
-        name: 'AWS S3',
-      },
-    ],
-  },
-  {
-    title: 'Passenga',
-    description: 'A mobile app for an Uber clone.',
-    technologies: [
-      {
-        img: 'ts',
-        name: 'TypeScript',
-      },
-      {
-        img: 'react',
-        name: 'React Native',
-      },
-      {
-        img: 'tailwindcss',
-        name: 'NativeWind',
-      },
-    ],
-  },
-  {
-    title: 'JavaScript formatter',
-    description: 'A python script that formats JS code',
-    technologies: [
-      {
-        img: 'python',
-        name: 'Python',
-      },
-    ],
-  },
-  {
-    title: 'Media Stack',
-    description:
-      'A self-hosted homelab media stack orchestrating 30+ Dockerized services (Jellyfin, the *ARR suite, Traefik, Prometheus and Grafana) for automated media management, monitoring, and secure remote access.',
-    technologies: [
-      {
-        img: 'docker',
-        name: 'Docker',
-      },
-      {
-        img: 'postgresql',
-        name: 'PostgreSQL',
       },
     ],
   },

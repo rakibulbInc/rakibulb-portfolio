@@ -15,6 +15,7 @@ type InfoBulletProps = {
     highlight: string;
     logo?: string;
     link?: string;
+    date?: string;
     subItems?: SubItem[];
   };
   index: number;
@@ -38,6 +39,14 @@ const InfoBullet = ({ item, index }: InfoBulletProps) => {
           ) : (
             <span className="text-white font-semibold underline decoration-1 decoration-primary/50 ml-1">
               {item.highlight}
+            </span>
+          )}
+          {item.date && (
+            <span
+              data-testid="info-bullet-date"
+              className="text-white/40 text-xs md:text-sm ml-2 whitespace-nowrap"
+            >
+              {item.date}
             </span>
           )}
         </p>

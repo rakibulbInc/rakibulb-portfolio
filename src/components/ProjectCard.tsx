@@ -19,10 +19,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
-      className="bg-card/50 rounded-xl border border-white/10 hover:border-primary/50 overflow-hidden transition-all w-full md:aspect-square flex flex-col"
+      className="bg-card/50 rounded-xl border border-white/10 hover:border-primary/50 overflow-hidden transition-all w-full md:aspect-square xl:aspect-auto flex flex-col"
     >
       {/* Image/Video Section */}
-      <div className="w-full h-48 md:h-1/2 bg-white/5 relative flex-shrink-0">
+      <div className="w-full h-48 md:h-1/2 xl:h-56 bg-white/5 relative flex-shrink-0">
         {project.video ? (
           <video
             src={project.video}
@@ -32,13 +32,22 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             muted
             playsInline
           />
-        ) : (
+        ) : project.img ? (
           <Image
-            src={project.img || '/placeholder.jpg'}
+            src={project.img}
             alt={project.title}
             fill
             className="object-cover"
           />
+        ) : (
+          <div
+            data-testid="project-card-fallback"
+            className="w-full h-full flex items-center justify-center bg-gradient-to-br from-card to-black/40"
+          >
+            <span className="font-mono text-4xl font-bold text-primary/30 select-none">
+              {project.title.slice(0, 2).toUpperCase()}
+            </span>
+          </div>
         )}
       </div>
 

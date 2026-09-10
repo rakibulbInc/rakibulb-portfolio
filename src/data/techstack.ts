@@ -8,12 +8,15 @@ export type Technology =
   | "mysql"
   | "mongodb"
   | "supabase"
+  | "redis"
   | "node"
   | "express"
   | "next"
   | "ejs"
   | "swagger"
   | "postman"
+  | "grpc"
+  | "kafka"
   | "vite"
   | "tailwindcss"
   | "aws"
@@ -22,6 +25,7 @@ export type Technology =
   | "s3"
   | "docker"
   | "kubernetes"
+  | "prometheus"
   | "npm"
   | "git"
   | "github"
@@ -43,6 +47,7 @@ export const TECHNOLOGIES: Technology[] = [
   "mysql",
   "mongodb",
   "supabase",
+  "redis",
 
   // Backend & Frameworks
   "node",
@@ -51,6 +56,8 @@ export const TECHNOLOGIES: Technology[] = [
   "ejs",
   "swagger",
   "postman",
+  "grpc",
+  "kafka",
 
   // Frontend & Styling
   "react",
@@ -65,6 +72,7 @@ export const TECHNOLOGIES: Technology[] = [
   "s3",
   "docker",
   "kubernetes",
+  "prometheus",
 
   // Package Managers & Tools
   "npm",

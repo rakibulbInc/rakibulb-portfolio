@@ -24,12 +24,17 @@ export const WORK_EXPERIENCES: Experience[] = [
     company: "SquaredUp",
     date: "Sep 2025 - Sep 2026",
     image: "squared-up.jpg",
-    bullets: ["N/A", "N/A", "N/A"],
+    bullets: [
+      "Co-owned SquaredUp's MCP server, enabling users to interact with the product through natural language prompts, reducing a 5-minute workflow to 30 seconds.",
+      "Engineered a summarisation pipeline on AWS Lambda, aggregating individual tile data and summarising it into a top-level dashboard summary.",
+      "Proposed and built an internal AI-powered pull request reviewer to reduce the time taken from pull request opened to closed.",
+      "Delivered customer-requested bug fixes and features, contributing directly to customer success and product quality within a cross-functional product team.",
+    ],
   },
   {
     role: "Software Developer",
     company: "Brunel Talent Marketplace",
-    date: "Nov 2024 - Present",
+    date: "Nov 2024 - Sep 2025",
     image: "btm.jpeg",
     bullets: [
       "Collaborated in a scrum environment to drive project deliverables, taking part in sprint planning and daily stand-ups.",
@@ -51,7 +56,7 @@ export const WORK_EXPERIENCES: Experience[] = [
   {
     role: "IT Technician",
     company: "Mercedes AMG F1 Team",
-    date: "Jul 2022 - Jul 2022",
+    date: "Jul 2022",
     image: "mercedes.jpg",
     bullets: [
       "Diagnosed technical issues occurring within the team, this included issues within the SAP software or setting up computer hardware and peripherals.",

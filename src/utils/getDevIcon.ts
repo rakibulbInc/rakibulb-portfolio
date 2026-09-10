@@ -20,6 +20,7 @@ export const getDevIconUrl = (tech: Technology): string => {
     mysql: `${baseUrl}/mysql/mysql-original.svg`,
     mongodb: `${baseUrl}/mongodb/mongodb-original.svg`,
     supabase: `${baseUrl}/supabase/supabase-original.svg`,
+    redis: `${baseUrl}/redis/redis-original.svg`,
 
     // Backend & Frameworks
     node: `${baseUrl}/nodejs/nodejs-original.svg`,
@@ -28,6 +29,8 @@ export const getDevIconUrl = (tech: Technology): string => {
     ejs: `${baseUrl}/ejs/ejs-original.svg`,
     swagger: `${baseUrl}/swagger/swagger-original.svg`,
     postman: `${baseUrl}/postman/postman-original.svg`,
+    grpc: `${baseUrl}/grpc/grpc-original.svg`,
+    kafka: `${baseUrl}/apachekafka/apachekafka-original.svg`,
 
     // Frontend & Styling
     react: `${baseUrl}/react/react-original.svg`,
@@ -42,6 +45,7 @@ export const getDevIconUrl = (tech: Technology): string => {
     s3: `${baseUrl}/amazonwebservices/amazonwebservices-original-wordmark.svg`,
     docker: `${baseUrl}/docker/docker-original.svg`,
     kubernetes: `${baseUrl}/kubernetes/kubernetes-original.svg`,
+    prometheus: `${baseUrl}/prometheus/prometheus-original.svg`,
 
     // Package Managers & Tools
     npm: `${baseUrl}/npm/npm-original-wordmark.svg`,
@@ -70,12 +74,15 @@ export const getTechColor = (tech: Technology): string => {
     mysql: "#4479A1",
     mongodb: "#47A248",
     supabase: "#3ECF8E",
+    redis: "#DC382D",
     node: "#339933",
     express: "#000000",
     next: "#000000",
     ejs: "#B4CA65",
     swagger: "#85EA2D",
     postman: "#FF6C37",
+    grpc: "#244B5A",
+    kafka: "#231F20",
     react: "#61DAFB",
     vite: "#646CFF",
     tailwindcss: "#06B6D4",
@@ -86,6 +93,7 @@ export const getTechColor = (tech: Technology): string => {
     s3: "#FF9900",
     docker: "#2496ED",
     kubernetes: "#326CE5",
+    prometheus: "#E6522C",
     npm: "#CB3837",
     git: "#F05032",
     github: "#181717",

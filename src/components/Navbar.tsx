@@ -20,7 +20,8 @@ const Navbar = () => {
   const getActiveSection = () => {
     if (pathname === "/projects") return "projects";
     if (pathname === "/blog" || pathname?.startsWith("/blog/")) return "blog";
-    return "about";
+    if (pathname === "/") return "about";
+    return null;
   };
 
   const activeSection = getActiveSection();

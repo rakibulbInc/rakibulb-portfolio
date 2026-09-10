@@ -1,17 +1,12 @@
 'use client';
 
 import InfoBullet from '@/components/InfoBullet';
+import Recommendations from '@/components/Recommendations';
 
 const AboutSection = () => {
   const aboutInfo = [
     {
-      text: 'Industry Year Placement Student at ',
-      highlight: 'SquaredUp',
-      link: 'https://squaredup.com',
-      logo: '/logos/squaredup.png',
-    },
-    {
-      text: 'Third year Computer Science student at ',
+      text: 'Final year Computer Science student at ',
       highlight: 'Brunel University London',
       logo: '/logos/brunelunilogo.png',
       link: 'https://brunel.ac.uk',
@@ -24,9 +19,17 @@ const AboutSection = () => {
 
   const previousInfo = [
     {
+      text: 'Placement Software Engineer at ',
+      highlight: 'SquaredUp',
+      link: 'https://squaredup.com',
+      logo: '/logos/squaredup.png',
+      date: 'Sep 2025 - Sep 2026',
+    },
+    {
       text: 'Web Developer at ',
       highlight: 'Brunel Talent Marketplace',
       logo: '/logos/btm-logo.png',
+      date: 'Nov 2024 - Sep 2025',
       subItems: [
         {
           highlight: 'IAG Cargo',
@@ -45,11 +48,13 @@ const AboutSection = () => {
       text: 'Lead Code Tutor at ',
       highlight: 'CodeCamp',
       logo: '/logos/codecamp-logo.png',
+      date: 'Sep 2024 - Dec 2024',
     },
     {
       text: 'IT Technician at ',
       highlight: 'Mercedes AMG F1 Team',
       logo: '/logos/MF1_team_logo_Registered-Negative_full_colour.webp',
+      date: 'Jul 2022',
     },
   ];
 
@@ -83,6 +88,14 @@ const AboutSection = () => {
             <InfoBullet key={idx} item={item} index={idx + aboutInfo.length} />
           ))}
         </div>
+      </div>
+
+      {/* Recommendations Section */}
+      <div className="space-y-3">
+        <h2 className="font-mono text-primary text-base font-bold uppercase italic underline decoration-1 decoration-primary/70">
+          Recommendations:
+        </h2>
+        <Recommendations />
       </div>
     </div>
   );
