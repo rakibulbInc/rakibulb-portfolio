@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { Github, Linkedin } from "@/components/icons/BrandIcons";
+import { APP_VERSION } from "@/lib/version";
 
 const Footer = () => {
   const socialLinks = [
@@ -52,10 +53,20 @@ const Footer = () => {
           })}
         </div>
 
-        {/* Copyright */}
-        <p className="text-white/40 text-xs">
-          © {new Date().getFullYear()} Rakibul Bhuiyan
-        </p>
+        {/* Version + Copyright */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="/changelog"
+            aria-label={`Version ${APP_VERSION} changelog`}
+            className="font-mono text-white/40 hover:text-primary text-xs transition-colors"
+          >
+            v{APP_VERSION}
+          </Link>
+          <span className="text-white/15 text-xs">|</span>
+          <p className="text-white/40 text-xs">
+            © {new Date().getFullYear()} Rakibul Bhuiyan
+          </p>
+        </div>
       </div>
     </footer>
   );
