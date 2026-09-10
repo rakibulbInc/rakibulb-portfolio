@@ -18,7 +18,7 @@ const ProjectsSectionNew = () => {
   );
 
   return (
-    <div className="w-full max-w-xl mx-auto h-full flex flex-col py-4">
+    <div className="w-full max-w-xl xl:max-w-5xl mx-auto h-full flex flex-col py-4">
       {/* Search Bar */}
       <div className="mb-6">
         <SearchInput
@@ -29,11 +29,16 @@ const ProjectsSectionNew = () => {
       </div>
 
       {/* Projects List */}
-      <div className="flex-1 overflow-y-auto no-scrollbar space-y-4">
+      <div className="flex-1 overflow-y-auto no-scrollbar">
         {filteredProjects.length > 0 ? (
-          filteredProjects.map((project, idx) => (
-            <ProjectCard key={idx} project={project} index={idx} />
-          ))
+          <div
+            data-testid="projects-grid"
+            className="grid grid-cols-1 xl:grid-cols-2 gap-4"
+          >
+            {filteredProjects.map((project, idx) => (
+              <ProjectCard key={idx} project={project} index={idx} />
+            ))}
+          </div>
         ) : (
           <div className="text-center text-white/40 py-8">
             No projects found
