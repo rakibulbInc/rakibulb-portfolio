@@ -1,6 +1,7 @@
 'use client';
 
 import InfoBullet from '@/components/InfoBullet';
+import Recommendations from '@/components/Recommendations';
 
 const AboutSection = () => {
   const aboutInfo = [
@@ -87,6 +88,14 @@ const AboutSection = () => {
             <InfoBullet key={idx} item={item} index={idx + aboutInfo.length} />
           ))}
         </div>
+      </div>
+
+      {/* Recommendations Section */}
+      <div className="space-y-3">
+        <h2 className="font-mono text-primary text-base font-bold uppercase italic underline decoration-1 decoration-primary/70">
+          Recommendations:
+        </h2>
+        <Recommendations />
       </div>
     </div>
   );
